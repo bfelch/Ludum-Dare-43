@@ -11,6 +11,7 @@ TagManager:
   - Blocker
   - Splitter
   - Splitter Permanent
+  - MainMenuTile
   layers:
   - Default
   - TransparentFX

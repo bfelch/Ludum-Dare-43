@@ -38,6 +38,7 @@ public class UIController : MonoBehaviour {
 	public void UnlockNextChallenge() {
 		if (currentChallenge == unlockedChallenges) {
 			unlockedChallenges++;
+			PlayerPrefs.SetInt("Unlocked", unlockedChallenges);
 		}
 
 		InitializeUI();
@@ -56,7 +57,7 @@ public class UIController : MonoBehaviour {
 		};
 
 		ShowComponents(challengePanel);
-
+		unlockedChallenges = PlayerPrefs.GetInt("Unlocked");
 		for (int i = 0; i < challenges.Length; i++) {
 			challenges[i].interactable = (i <= unlockedChallenges);
 		}

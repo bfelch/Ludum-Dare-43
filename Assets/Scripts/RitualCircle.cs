@@ -12,6 +12,7 @@ public class RitualCircle : MonoBehaviour {
 	public ParticleSystem particles;
 	public AudioSource sound;
 
+	public TextMesh ratioText;
 	public GameObject circleStandard;
 	public GameObject circleBalance;
 
@@ -38,6 +39,9 @@ public class RitualCircle : MonoBehaviour {
 		for (int i = 0; i < circles.Length; i++) {
 			circles[i].SetActive(i == ritualType);
 		}
+
+		ratioText.text = balanceRatio.ToString();
+		ratioText.gameObject.SetActive(ritualType == 1);
 
 		gameObject.GetComponent<ParticleSystemRenderer>().material =
 			circles[ritualType].GetComponent<Renderer>().material;

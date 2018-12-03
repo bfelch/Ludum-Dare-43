@@ -50,7 +50,9 @@ public class BoardController : MonoBehaviour {
 			}
 		}
 
-		cameraTarget.transform.position = new Vector3(width / 2, 0, length / 2);
+		if (cameraTarget != null) {
+			cameraTarget.transform.position = new Vector3(width / 2, 0, length / 2);
+		}
 	}
 
 	private bool PlaceLight(int width, int length, int x, int z) {

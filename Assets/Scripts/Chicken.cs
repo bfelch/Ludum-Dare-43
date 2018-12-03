@@ -42,6 +42,9 @@ public class Chicken : MonoBehaviour {
 						hit.transform.gameObject.GetComponent<RitualCircle>().PerformRitual();
 						Destroy(gameObject);
 						break;
+					case "MainMenuTile":
+						transform.position = new Vector3(0, 0, 6);
+						break;
 				}
 			}
 		} else {
