@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 392}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1680
     height: 956
-  m_MinSize: {x: 679, y: 342}
-  m_MaxSize: {x: 12004, y: 8042}
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 62
+  controlID: 11
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -114,15 +114,15 @@ MonoBehaviour:
     y: 579
     width: 1339
     height: 377
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 19}
   - {fileID: 13}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
     y: 0
     width: 1680
     height: 1006
-  m_MinSize: {x: 950, y: 392}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -207,10 +207,10 @@ MonoBehaviour:
     y: 0
     width: 1339
     height: 956
-  m_MinSize: {x: 404, y: 342}
-  m_MaxSize: {x: 8004, y: 8042}
+  m_MinSize: {x: 406, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 63
+  controlID: 59
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -231,10 +231,10 @@ MonoBehaviour:
     y: 0
     width: 1339
     height: 579
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 64
+  controlID: 60
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -404,20 +404,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/bfelch/Documents/Unity/Ludum Dare 43
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 76350000
-    m_LastClickedID: 13686
-    m_ExpandedIDs: 000000003e31000000ca9a3b
+    m_SelectedIDs: 202b0000
+    m_LastClickedID: 11040
+    m_ExpandedIDs: 00000000e029000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -445,7 +445,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000e0290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -470,8 +470,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: f67c98ff
-    m_LastClickedInstanceID: -6783754
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300002a9affffbee3fcff60bcfcff886bfaffec2c00003e350000beadfeff20360000000000007236000092360000f482fdff88360000b6660400
     m_RenameOverlay:
@@ -561,9 +561,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f67c98ff
-    m_LastClickedID: -6783754
-    m_ExpandedIDs: 729ea3ff660ca5ff8e85b2ff4e8bb2ff24beb7ffa25dbaff3ccdc4ffac18c8ffa477c9ff9e28cdffd42acdff32a3cdff9a38ceffa638ceff8c41dbff205bdbffb85ddbff5093dcff6099dcffd810e2ff2833e2ff6a14e3ffae9de3ffb49de3ffae58e7ff2042e8ff3642e8ffa4ede9ff9cb5eaff1c32ebff3aaaf0ff5c5af4ffe81df6ffecd4f6ff8255f8ff38a2faff58cafaff740bfbff5a10fbff100afdffbe8efdff2c95fdffba96fdff88fffdff1c80feff58d7feffba4affff5eefffff00000000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 3e8efeffe88efeffa697feffb097feff36a7feffdea7feff9cb0feffa6b0feff52f0fefffcf0feffbaf9feffc4f9feffde79ffff887affff4683ffff5083ffffea8cffff948dffff5296ffff5c96ffffbceaffffcefbffff000000005e390000a03c0000c47d00001a820000c0aa0000e6ae000040e70000d4eb0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -582,7 +582,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-  - Gameplay
+  - Main Menu
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -650,7 +650,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.3857917, y: -0.37738505, z: 0.17688785, w: -0.82307714}
     speed: 2
-    m_Value: {x: -0.3857917, y: -0.37738505, z: 0.17688785, w: -0.82307714}
+    m_Value: {x: 0.38579166, y: 0.37738502, z: -0.17688785, w: 0.82307714}
   m_Size:
     m_Target: 1.7980459
     speed: 2
