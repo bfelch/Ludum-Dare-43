@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\ChickenController.cs" />
      <Compile Include="Assets\Scripts\ConveyorController.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\LevelTextController.cs" />
      <Compile Include="Assets\Scripts\RitualCircle.cs" />
      <Compile Include="Assets\Scripts\Splitter.cs" />
      <Compile Include="Assets\Scripts\UIController.cs" />

@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour {
 
 	private int totalChickenCount;
 	private int chickenCount;
-	private IDictionary<RitualCircle, int> ritualCounter;
+	private IDictionary<RitualCircle, int> ritualCounter = null;
 
 	public UIController uiController;
 
@@ -23,23 +23,62 @@ public class GameController : MonoBehaviour {
 	public void SetChickenCount(int count) {
 		totalChickenCount = count;
 		chickenCount = 0;
-		ritualCounter = new Dictionary<RitualCircle, int>();
+
+		RitualCircle[] ritualCircles =
+			(RitualCircle[])GameObject.FindObjectsOfType<RitualCircle>();
+		
+		foreach (RitualCircle ritualCircle in ritualCircles) {
+			InitializeCircle(ritualCircle);
+		}
+	}
+
+	public void InitializeCircle(RitualCircle ritualCircle) {
+		if (ritualCounter == null) {
+			ritualCounter = new Dictionary<RitualCircle, int>();
+		}
+
+		ritualCounter[ritualCircle] = 0;
 	}
 
 	public void AddChicken(RitualCircle ritualCircle) {
 		string key = ritualCircle.gameObject.name;
-		if (ritualCounter.ContainsKey(ritualCircle)) {
-			ritualCounter[ritualCircle]++;
-		} else {
-			ritualCounter[ritualCircle] = 1;
+		if (!ritualCounter.ContainsKey(ritualCircle)) {
+			InitializeCircle(ritualCircle);
 		}
+		ritualCounter[ritualCircle]++;
 
 		chickenCount++;
 
+		CheckForWin();
+	}
+
+	private void CheckForWin() {
 		if (chickenCount == totalChickenCount) {
-			uiController.EndChallenge(true);
-			// TODO show success screen
-			// TODO check matching ratios
+			int minRatio = int.MaxValue;
+			int minRatioCount = int.MaxValue;
+
+			foreach (KeyValuePair<RitualCircle, int> ritual in ritualCounter) {
+				if (ritual.Key.ritualType == 1) {
+					if (ritual.Key.balanceRatio < minRatio) {
+						minRatio = ritual.Key.balanceRatio;
+						minRatioCount = ritual.Value;
+					}
+				}
+			}
+
+			bool failed = false;
+			foreach (KeyValuePair<RitualCircle, int> ritual in ritualCounter) {
+				if (ritual.Key.ritualType != 1) {
+					continue;
+				}
+
+				if ((minRatioCount / minRatio * ritual.Key.balanceRatio) != ritual.Value) {
+					failed = true;
+					break;
+				}
+			}
+			uiController.EndChallenge(!failed);
+			ritualCounter = null;
 		}
 	}
 }

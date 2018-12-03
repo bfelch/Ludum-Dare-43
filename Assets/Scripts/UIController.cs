@@ -12,6 +12,7 @@ public class UIController : MonoBehaviour {
 	public GameObject successPanel;
 	public GameObject failurePanel;
 	public GameObject finalePanel;
+	public GameObject levelPanel;
 
 	public Button[] challenges;
 
@@ -50,7 +51,8 @@ public class UIController : MonoBehaviour {
 			challengePanel,
 			successPanel,
 			failurePanel,
-			finalePanel
+			finalePanel,
+			levelPanel
 		};
 
 		ShowComponents(challengePanel);
@@ -76,6 +78,10 @@ public class UIController : MonoBehaviour {
 		} else {
 			ShowComponents(failurePanel);
 		}
+	}
+
+	public void ShowLevelText() {
+		ShowComponents(levelPanel);
 	}
 
 	public void Deploy() {

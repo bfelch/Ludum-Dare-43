@@ -46,7 +46,7 @@ public class ConveyorController : MonoBehaviour {
 							conveyor.transform.SetParent(gameObject.transform);
 							SetSelected(conveyor);
 						} else {
-							SetSelected(null); 
+							SetSelected(null);
 						}
 						break;
 					case "Conveyor":

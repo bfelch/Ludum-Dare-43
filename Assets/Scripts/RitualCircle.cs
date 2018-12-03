@@ -28,7 +28,7 @@ public class RitualCircle : MonoBehaviour {
 	}
 
 	public void InitializeCircles() {
-		gameController = null;
+		gameController = (GameController) FindObjectOfType<GameController>();
 
 		circles = new GameObject[] {
 			circleStandard,
@@ -46,10 +46,6 @@ public class RitualCircle : MonoBehaviour {
 	public void PerformRitual() {
 		particles.Play();
 		sound.Play();
-
-		if (gameController == null) {
-			gameController = (GameController) FindObjectOfType<GameController>();
-		}
 		gameController.AddChicken(this);
 	}
 }
