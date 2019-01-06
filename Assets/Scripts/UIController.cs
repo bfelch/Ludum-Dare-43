@@ -7,6 +7,7 @@ public class UIController : MonoBehaviour {
 
 	public GameObject deployButton;
 	public GameObject resetButton;
+	public GameObject fastForwardButton;
 
 	public GameObject challengePanel;
 	public GameObject successPanel;
@@ -48,6 +49,7 @@ public class UIController : MonoBehaviour {
 		components = new GameObject[] {
 			deployButton,
 			resetButton,
+			fastForwardButton,
 
 			challengePanel,
 			successPanel,
@@ -66,6 +68,10 @@ public class UIController : MonoBehaviour {
 	private void ShowComponents(GameObject obj) {
 		foreach (GameObject component in components) {
 			component.SetActive(component == obj);
+		}
+
+		if (obj != fastForwardButton) {
+			Time.timeScale = 1.0f;
 		}
 	}
 
@@ -87,9 +93,18 @@ public class UIController : MonoBehaviour {
 
 	public void Deploy() {
 		ShowComponents(resetButton);
+		fastForwardButton.SetActive(true);
 	}
 
 	public void Reset() {
 		ShowComponents(deployButton);
+	}
+
+	public void ToggleFastForward() {
+		if (Time.timeScale == 1.0f) {
+			Time.timeScale = 2.0f;
+		} else {
+			Time.timeScale = 1.0f;
+		}
 	}
 }

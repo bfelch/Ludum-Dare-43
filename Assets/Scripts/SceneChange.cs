@@ -16,10 +16,16 @@ public class SceneChange : MonoBehaviour {
 	}
 
 	public void LoadGameplay() {
+		ResetTimeScale();
 		SceneManager.LoadScene("Gameplay");
 	}
 
 	public void LoadMainMenu() {
+		ResetTimeScale();
 		SceneManager.LoadScene("Main Menu");
+	}
+
+	private void ResetTimeScale() {
+		Time.timeScale = 1.0f;
 	}
 }

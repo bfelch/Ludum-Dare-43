@@ -21,7 +21,9 @@ public class MainMenuUIController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Input.GetKeyDown("space")) {
+			ShowMenu(mainMenu.activeSelf ? null : mainMenu);
+		}
 	}
 
 	private void ShowMenu(GameObject menu) {
